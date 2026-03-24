@@ -1,0 +1,9 @@
+{
+  "name": "pet_bottle_full",
+  "K_0": 3.0,
+  "theta_yield": 0.05,
+  "beta": 30.0,
+  "mass": 0.500,
+  "tau_min": 0.025,
+  "theta_contact": 0.35
+}

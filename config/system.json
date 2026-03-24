@@ -1,0 +1,7 @@
+{
+  "path":"../data/",
+  "os":"ubuntu",
+  "version":"0.0.1",
+  "compiler":"g++",
+  "sample_frequency":"100000"
+}

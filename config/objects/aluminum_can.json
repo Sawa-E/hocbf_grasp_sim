@@ -1,0 +1,9 @@
+{
+  "name": "aluminum_can",
+  "K_0": 5.0,
+  "theta_yield": 0.03,
+  "beta": 50.0,
+  "mass": 0.015,
+  "tau_min": 0.001,
+  "theta_contact": 0.35
+}

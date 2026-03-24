@@ -1,0 +1,9 @@
+{
+  "name": "paper_cup_empty",
+  "K_0": 0.2,
+  "theta_yield": 0.01,
+  "beta": 80.0,
+  "mass": 0.010,
+  "tau_min": 0.001,
+  "theta_contact": 0.35
+}
