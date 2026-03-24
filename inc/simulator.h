@@ -103,6 +103,11 @@ public:
       ddx_sim(idx)   = (u - tau_ext) / M(idx);
        dx_sim(idx)  += ddx_sim(idx) * dt_;
         x_sim(idx)  += dx_sim(idx) * dt_;
+      // pulse_count にコピー（read() が pulse_count を読むため）
+      // position_inverse=1.0 の場合 update_all_position() が x = -pulse_count とするため
+      // -x_sim を格納して x = -(-x_sim) = x_sim となるようにする
+      double sign = (simulated_robot_ptr_->joints.at(idx).parameter[mc::position_inverse] > 0.5) ? -1.0 : 1.0;
+      simulated_robot_ptr_->joints.at(idx).data[mc::response][mc::pulse_count] = sign * x_sim(idx);
     }
     return SUCCESS;
   }

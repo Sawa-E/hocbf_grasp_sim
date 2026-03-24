@@ -28,8 +28,9 @@ struct adaptive_theta_max
 
     // dynamic shrink rate upper bound (safety condition (i))
     double feasibility_margin = u_ub_static - u_lb;
+    // 0.8倍のマージンで G > 0 を数値的にも保証
     double alpha_shrink_max = (feasibility_margin > 0.0 && M * 2.0 * gamma_pos > 0.0)
-      ? feasibility_margin / (M * 2.0 * gamma_pos)
+      ? 0.8 * feasibility_margin / (M * 2.0 * gamma_pos)
       : 0.0;
     double alpha_shrink = std::min(alpha_shrink_nominal_, alpha_shrink_max);
 
